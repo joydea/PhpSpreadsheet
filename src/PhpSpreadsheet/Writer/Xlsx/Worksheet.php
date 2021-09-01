@@ -1000,6 +1000,8 @@ class Worksheet extends WriterPart
         // pageSetup
         $objWriter->startElement('pageSetup');
         $objWriter->writeAttribute('paperSize', $pSheet->getPageSetup()->getPaperSize());
+        $objWriter->writeAttribute('paperHeight', $pSheet->getPageSetup()->getPaperHeight());
+        $objWriter->writeAttribute('paperWidth', $pSheet->getPageSetup()->getPaperWidth());
         $objWriter->writeAttribute('orientation', $pSheet->getPageSetup()->getOrientation());
 
         if ($pSheet->getPageSetup()->getScale() !== null) {

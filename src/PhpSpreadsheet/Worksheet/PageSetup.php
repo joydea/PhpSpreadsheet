@@ -167,6 +167,20 @@ class PageSetup
     private $paperSize = self::PAPERSIZE_LETTER;
 
     /**
+     * Paper height.
+     *
+     * @var string (ex) 21cm, 8.5in
+     */
+    private $paperHeight = null;
+
+    /**
+     * Paper width.
+     *
+     * @var string (ex) 21cm, 8.5in
+     */
+    private $paperWidth = null;
+
+    /**
      * Orientation.
      *
      * @var string
@@ -362,6 +376,54 @@ class PageSetup
     public function setFitToPage($pValue)
     {
         $this->fitToPage = $pValue;
+
+        return $this;
+    }
+
+    /**
+     * Get Paper Height.
+     *
+     * @return string
+     */
+    public function getPaperHeight()
+    {
+        return $this->paperHeight;
+    }
+
+    /**
+     * Set Paper Height.
+     *
+     * @param string
+     *
+     * @return $this
+     */
+    public function setPaperHeight($pValue)
+    {
+        $this->paperHeight = $pValue;
+
+        return $this;
+    }
+
+    /**
+     * Get Paper Width.
+     *
+     * @return string
+     */
+    public function getPaperWidth()
+    {
+        return $this->paperWidth;
+    }
+
+    /**
+     * Set Paper Width.
+     *
+     * @param string
+     *
+     * @return $this
+     */
+    public function setPaperWidth($pValue)
+    {
+        $this->paperWidth = $pValue;
 
         return $this;
     }
